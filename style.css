@@ -114,3 +114,37 @@ p {
 #lightbox:active img {
     transform: scale(1.05); /* Pequeno zoom na imagem */
 }
+
+/* Estilos para a seção de contato */
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #25d366; /* Cor do WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botão fixo de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Cor do WhatsApp */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-button a {
+    display: block;
+}

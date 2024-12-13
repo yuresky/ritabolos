@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritabolos</title>
+    <title>Rita Bolos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Botão fixo do WhatsApp -->
+<div class="whatsapp-button">
+    <a href="https://wa.me/5599999999999" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" />
+    </a>
+</div>
+
     <article>
         <div class="logo"><h1>BOLOS</h1></div>
+        <div class="contact-info">
+            <p>Entre em contato pelo WhatsApp: <strong><a href="https://wa.me/5599999999999" target="_blank">+55 99 99999-9999</a></strong></p>
+        </div>
     </article>
 
 
@@ -208,6 +218,30 @@
     lightbox.addEventListener('click', () => {
         lightbox.classList.remove('open'); // Esconde o lightbox
     });
-    </script>
+
+    // Função que verifica se a imagem está visível na tela
+    function checkVisibility() {
+        const cards = document.querySelectorAll('.card');
+        const windowHeight = window.innerHeight;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < windowHeight * 0.8) {
+                card.classList.add('visible');
+            }
+        });
+    }
+
+    // Verificar a visibilidade das imagens ao rolar a página
+    window.addEventListener('scroll', checkVisibility);
+
+    // Verificar a visibilidade das imagens quando a página for carregada
+    window.addEventListener('load', checkVisibility);
+
+    // Iniciar a verificação
+    checkVisibility();
+
+</script>
+
     
 </html>
