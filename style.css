@@ -12,22 +12,35 @@ body {
     display: flex;
     justify-content: center;
     font-size: 3em;
+    transition: all 3s ease;
     color: #ff8b94; /* Cor suave para a logo */
 }
+
+.fixed {
+    position: fixed;
+    top: -6%;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f3f0;
+  }
+  
+.sticky + .section {
+    padding-top: 20px; /* Espaço para o conteúdo não ficar coberto */
+  }
 
 .aro {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #ffe6e6, #fff2f0); /* Gradiente suave */
+    background: linear-gradient(45deg, #ffe6e6, #fff2f0); 
     margin: 30px 0;
     padding: 10px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Pacifico', cursive; /* Fonte cursiva e temática */
+    font-family: 'Pacifico', cursive; 
     font-size: 24px;
-    color: #d14b4b; /* Cor para lembrar doces e morangos */
-    border-top: 4px dashed #f8a5c2; /* Linha tracejada que remete ao tema de confeitaria */
+    color: #d14b4b;
+    border-top: 4px dashed #f8a5c2; 
     border-bottom: 4px dashed #f8a5c2;
 
     position: relative;
@@ -49,16 +62,16 @@ body {
 
 section {
     max-width: 700px;
-    column-count: 2; /* 2 colunas para um layout mais limpo */
+    column-count: 2;
     padding: 28px;
     margin: 0 auto;
 }
 
 img {
     width: 100%;
-    border-radius: 17px 17px 0 0; /* Bordas arredondadas */
+    border-radius: 17px 17px 0 0; 
     transition: all linear 200ms;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para as imagens */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 p {
@@ -71,23 +84,23 @@ p {
     margin-bottom: 20px;
     transition: all linear 200ms;
     break-inside: avoid-column;
-    background-color: #fff;
+    /* background-color: #d14b4b; */
     border-radius: 17px;
-    overflow: hidden; /* Evita que imagens saiam do limite da borda */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover img {
-    transform: scale(1.04); /* Efeito de zoom nas imagens */
+    transform: scale(1.04);
 }
 
 .card:hover {
-    background-color: #fce1e5; /* Cor de fundo suave ao passar o mouse */
+    background-color: #fce1e5; 
 }
 
 /* Estilos para o lightbox */
 #lightbox {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -108,14 +121,13 @@ p {
 }
 
 #lightbox.open {
-    display: flex; /* Torna o lightbox visível */
+    display: flex;
 }
 
 #lightbox:active img {
-    transform: scale(1.05); /* Pequeno zoom na imagem */
+    transform: scale(1.05);
 }
 
-/* Estilos para a seção de contato */
 .contact-info {
     text-align: center;
     margin-top: 20px;

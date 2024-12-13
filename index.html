@@ -15,7 +15,7 @@
 </div>
 
     <article>
-        <div class="logo"><h1>BOLOS</h1></div>
+        <div class="logo"><h1 id="logo">BOLOS</h1></div>
         <div class="contact-info">
             <p>Entre em contato pelo WhatsApp: <strong><a href="https://wa.me/5599999999999" target="_blank">+55 99 99999-9999</a></strong></p>
         </div>
@@ -24,7 +24,7 @@
 
     <div class="aro15">
         <div class="aro">
-            <h2>ARO15</h2>
+            <h2>Aro 15</h2>
         </div>
         <section>
             <div class="card">
@@ -66,7 +66,7 @@
 
     <div class="aro16">
         <div class="aro">
-            <h2>ARO16</h2>
+            <h2>Aro 16</h2>
         </div>
         <section>
             <div class="card">
@@ -108,7 +108,7 @@
 
     <div class="aro17">
         <div class="aro">
-            <h2>ARO17</h2>
+            <h2>Aro 17</h2>
         </div>
         <section>
             <div class="card">
@@ -194,32 +194,25 @@
         <img id="lightbox-img" src="" alt="Imagem Ampliada">
     </div>
     
-    
 </body>
 
 <script>
-    // Seleciona o lightbox e a imagem
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     
-    // Seleciona todas as imagens dentro das divs com a classe 'card'
     const images = document.querySelectorAll('.card img');
     
-    // Adiciona um evento de clique para cada imagem
     images.forEach(image => {
         image.addEventListener('click', () => {
-            // Define o atributo src da imagem ampliada
             lightboxImg.src = image.src;
-            lightbox.classList.add('open'); // Mostra o lightbox
+            lightbox.classList.add('open'); 
         });
     });
     
-    // Fecha o lightbox ao clicar fora da imagem
     lightbox.addEventListener('click', () => {
         lightbox.classList.remove('open'); // Esconde o lightbox
     });
 
-    // Função que verifica se a imagem está visível na tela
     function checkVisibility() {
         const cards = document.querySelectorAll('.card');
         const windowHeight = window.innerHeight;
@@ -232,14 +225,27 @@
         });
     }
 
-    // Verificar a visibilidade das imagens ao rolar a página
     window.addEventListener('scroll', checkVisibility);
 
-    // Verificar a visibilidade das imagens quando a página for carregada
     window.addEventListener('load', checkVisibility);
 
-    // Iniciar a verificação
     checkVisibility();
+
+
+var logo = document.getElementById("logo");
+var sticky = logo.offsetTop; 
+
+function fixLogo() {
+  if (window.pageYOffset >= sticky) {
+    logo.classList.add("fixed");
+  } else {
+    logo.classList.remove("fixed");
+  }
+}
+
+window.onscroll = function() {
+  fixLogo();
+};
 
 </script>
 
