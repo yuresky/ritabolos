@@ -231,22 +231,6 @@
 
     checkVisibility();
 
-
-var logo = document.getElementById("logo");
-var sticky = logo.offsetTop; 
-
-function fixLogo() {
-  if (window.pageYOffset >= sticky) {
-    logo.classList.add("fixed");
-  } else {
-    logo.classList.remove("fixed");
-  }
-}
-
-window.onscroll = function() {
-  fixLogo();
-};
-
 </script>
 
     
